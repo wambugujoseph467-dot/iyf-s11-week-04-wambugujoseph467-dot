@@ -87,3 +87,93 @@ let yearTurn100 = currentYear + (100 - myAge);
 console.log("Age in days:", ageInDays);
 console.log("Age in hours:", ageInHours);
 console.log("Year you'll turn 100:", yearTurn100);
+
+
+// Exercise 1: Function Declarations
+
+// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Arrow function with body
+const divide = (a, b) => {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+};
+
+// Test the functions
+console.log(greet("Joseph"));
+console.log(add(10, 5));
+console.log(multiply(4, 6));
+console.log(divide(20, 4));
+console.log(divide(20, 0));
+
+
+// Exercise 2: Build These Functions
+
+// 1. Calculate Area
+function calculateArea(width, height) {
+    return width * height;
+}
+
+// 2. Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+// 3. Is Even
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+// 4. Get Initials
+function getInitials(fullName) {
+    let names = fullName.split(" ");
+    return names[0][0] + names[1][0];
+}
+
+// 5. Reverse String
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+// Test the functions
+console.log(calculateArea(10, 5));
+console.log(celsiusToFahrenheit(25));
+console.log(isEven(8));
+console.log(isEven(7));
+console.log(getInitials("Joseph Wambugu"));
+console.log(reverseString("JavaScript"));
+
+
+// Exercise 3: Default Parameters
+
+function greetUser(name = "Guest", greeting = "Hello") {
+    return `${greeting}, ${name}!`;
+}
+
+// Test the function
+console.log(greetUser());
+console.log(greetUser("Alice"));
+console.log(greetUser("Bob", "Hi"));
+
+// Challenge: Calculate Tip
+
+function calculateTip(bill, tipPercent = 15) {
+    return bill * (tipPercent / 100);
+}
+
+// Test the function
+console.log(calculateTip(100));
+console.log(calculateTip(200, 20));
