@@ -177,3 +177,101 @@ function calculateTip(bill, tipPercent = 15) {
 // Test the function
 console.log(calculateTip(100));
 console.log(calculateTip(200, 20));
+
+// ==============================
+// Exercise 1: If/Else Statements
+// ==============================
+
+function getGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else if (score >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+// Test the function
+console.log(getGrade(95));
+console.log(getGrade(82));
+console.log(getGrade(74));
+console.log(getGrade(61));
+console.log(getGrade(45));
+
+
+// ========
+// Exercise 3A: For Loop
+// ==============================
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+
+}
+// ==============================
+// Exercise 3B: While Loop
+// ==============================
+
+let loopCount = 0;
+
+while (loopCount < 5) {
+    console.log(loopCount);
+    loopCount++;
+}
+
+// ==============================
+// Exercise 3C: For...of Loop
+// ==============================
+
+const colors = ["red", "green", "blue"];
+
+for (const color of colors) {
+    console.log(color);
+}
+
+// ==============================
+// Challenge 1: Print Numbers 1–100
+// ==============================
+
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
+}
+
+// ==============================
+// Challenge 2: Even Numbers 1–50
+// ==============================
+
+for (let i = 2; i <= 50; i += 2) {
+    console.log(i);
+}
+
+// ==============================
+// Challenge 3: FizzBuzz
+// ==============================
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
+
+// ==============================
+// Challenge 4: Triangle of Stars
+// ==============================
+
+let stars = "";
+
+for (let i = 1; i <= 5; i++) {
+    stars += "*";
+    console.log(stars);
+}
