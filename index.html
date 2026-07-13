@@ -9,7 +9,137 @@
 
 <h1>Check the Console!</h1>
 
-<script src="main.js"></script>
+<script>
+    // Add
+function add(a, b) {
+    return a + b;
+}
+
+// Subtract
+function subtract(a, b) {
+    return a - b;
+}
+
+// Multiply
+function multiply(a, b) {
+    return a * b;
+}
+
+// Divide
+function divide(a, b) {
+    if (b === 0) {
+        return "Error: Cannot divide by zero";
+    }
+    return a / b;
+}
+
+// Main calculator
+function calculate(num1, operator, num2) {
+    switch (operator) {
+        case "+":
+            return add(num1, num2);
+
+        case "-":
+            return subtract(num1, num2);
+
+        case "*":
+            return multiply(num1, num2);
+
+        case "/":
+            return divide(num1, num2);
+
+        case "%":
+            return num1 % num2;
+
+        case "**":
+            return num1 ** num2;
+
+        default:
+            return "Invalid operator";
+    }
+}
+
+// Test
+console.log(calculate(10, "+", 5));   // 15
+console.log(calculate(10, "-", 5));   // 5
+console.log(calculate(10, "*", 5));   // 50
+console.log(calculate(10, "/", 5));   // 2
+console.log(calculate(10, "/", 0));   // Error: Cannot divide by zero
+console.log(calculate(10, "%", 3));   // 1
+console.log(calculate(2, "**", 3));   // 8
+
+//Exercise 1: Array Basics
+// ==========================
+// Exercise 1: Array Basics
+// ==========================
+
+const fruits = ["apple", "banana", "orange"];
+const numbers = [1, 2, 3, 4, 5];
+const mixed = ["hello", 42, true, null];
+
+// Access elements
+console.log(fruits[0]);      // apple
+console.log(fruits.length);  // 3
+
+// Modify arrays
+fruits.push("grape");
+fruits.unshift("mango");
+fruits.pop();
+fruits.shift();
+
+console.log(fruits);
+
+// ==========================
+// Exercise 2: Array Methods
+// ==========================
+
+const nums = [1, 2, 3, 4, 5];
+
+// forEach
+nums.forEach(num => console.log(num * 2));
+
+// map
+const doubled = nums.map(num => num * 2);
+console.log(doubled);
+
+// filter
+const evenNumbers = nums.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+
+// find
+const firstEven = nums.find(num => num % 2 === 0);
+console.log(firstEven);
+
+// reduce
+const sum = nums.reduce((total, num) => total + num, 0);
+console.log(sum);
+
+// includes
+console.log(nums.includes(3));
+
+// ==========================
+// Build Tasks
+// ==========================
+
+const values = [5, -3, 8, 12, -6, 15];
+
+// 1. Double all numbers
+const doubleValues = values.map(num => num * 2);
+console.log("Doubled:", doubleValues);
+
+// 2. Remove negative numbers
+const positiveValues = values.filter(num => num >= 0);
+console.log("Positive:", positiveValues);
+
+// 3. First number greater than 10
+const firstGreater = values.find(num => num > 10);
+console.log("First > 10:", firstGreater);
+
+// 4. Product of all numbers
+const product = values.reduce((total, num) => total * num, 1);
+console.log("Product:", product);
+
+</script>
 
 </body>
 </html>
